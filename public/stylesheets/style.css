@@ -1,0 +1,83 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: ogg;
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+}
+#main{
+  width:100%;
+  height: 100vh;
+  background-color: thistle;
+  display: flex;
+}
+#left{
+  width: 40vh;
+  /* height: 100vh; */
+  background-color: blanchedalmond;
+  padding: 2%;
+  display: auto;
+}
+#left h1{
+  color: rgb(192, 121, 40);
+}
+#left form{ 
+  padding:6%;
+  margin: 5%;
+  font-weight: 900;
+}
+#files{
+  padding: 4%;
+  margin: 2%;
+  font-size: 15px;
+  /* display:flex; */
+  justify-content: space-between;
+}
+#right{
+  margin-top:3%;
+  width: 82%;
+  background-color: rgb(228, 209, 147);
+}
+#right #head {
+  background-color: rgb(130, 223, 226);
+  width: 10%;
+  position: absolute;
+  height: 5vh;
+  margin-top: -2.5%;
+  border-top-right-radius:25px;
+}
+#head #open{
+  position: absolute;
+  text-decoration: none;
+  text-align: center;
+  justify-content: center;
+  top:45%;
+  left:5%;
+  color:black;
+}
+
+#data{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+textarea {
+position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+}
+
+#f input{
+  position: absolute;
+  font-family: "ogg";
+  font-weight: 900;
+  right: 5%;
+  top:-4.6%;
+  padding: 5px 15px;
+}

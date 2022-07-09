@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+<body>
+  <div id="main">
+    <div id="left">
+          <h1>bro code</h1>
+          <form action="/createfile">
+          <input name="file" type="text" placeholder="create a new files">
+          </form>
+          <hr>
+        <% if(files.length > 0){ %>
+          <div id="files">
+            <% files.forEach(function(val){ %>
+              <h4><span><%= val %></span> <span><a href="/read/<%=val%>"><i class="ri-file-edit-line"></i></a> <a href="/delete/<%=val%>"><i class="ri-delete-bin-6-line"></i></a></span></h4>
+            <% }) %>
+          </div>
+       <% } else { %>
+        <h4>NO FILES HERE</h4>
+      <% } %>
+    </div>
+    <div id="right">
+       <div id="head">
+       <% if(filename.length > 0){ %>
+        <div id="open"><%= filename %></div>
+       <% } %>
+       </div>
+       <div contenteditable="true" id="data">
+        <form id="f" action="/save/<%=filename%>" method="post">
+          <textarea name="filedata"><%= data %></textarea>
+          <input type="submit" value="save">
+        </form>
+       </div>
+    </div>
+  </div>
+</body>
+</html>
